@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API testing</title>
+</head>
+<body>
+    <script>
+        fetch('http://localhost:3000/tasks')
+            .then(response => {
+                if(!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch oepration: ', error);
+            })
+
+            // fetch('http://localhost:3000/tasks', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({
+            //         id: 2,
+            //         title: 'New task',
+            //         description: 'Example description'
+            //     })
+            // })
+            //     .then(res => res.json())
+            //     .then(data => console.log('Created: ', data))
+            //     .catch(error => console.error('Error: ', error));;
+        
+            // fetch('http://localhost:3000/tasks', {
+            //     method: 'PUT',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({
+            //         id: 1,
+            //         title: 'NEW! Task 1',
+            //         description: 'New description for task 1'
+            //     })
+            // })
+            //     .then(res => res.json())
+            //     .then(data => console.log('Updated: ', data))
+            //     .catch(error => console.error('Error: ', error));
+            // fetch('http://localhost:3000/tasks', {
+            //     method: 'DELETE',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({
+            //         id: 1
+            //     })
+            // })
+            //     .then(res => res.json())
+            //     .then(data => console.log('Updated: ', data))
+            //     .catch(error => console.error('Error: ', error));
+
+    </script>
+</body>
+</html>
