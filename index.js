@@ -93,3 +93,13 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`✅ Server running on http://localhost:${port}`);
 });
+
+
+/*
+MYSQL_DATABASE railway
+MYSQL_ROOT_PASSWORD HJgpUeAvDxeqrzNAtEkXRKuGmAekiqdD
+MYSQLDATABASE railway
+MYSQLHOST mysql.railway.internal
+MYSQLPORT 3306
+MYSQLUSER root
+*/
